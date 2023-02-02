@@ -1,0 +1,45 @@
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+justify-content: centre;
+align-items: centre;
+display: flex;
+min-height: 70vh;
+}
+
+.cardbox{
+width:40rem;
+height:20rem;
+display:flex;
+justify-content:centre;
+align-items:centre;
+border-radius:50px;
+background-color: #ebedef;
+box-shadow: 31px 31px 61px #c8c9cb;
+}
+
+button
+{
+width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 0;
+border-radius: 61px;
+background-color: #ebedef;
+box-shadow: 7px 7px 15px #c8c9cb -7px -7px 15px #red;
+transform: translateY(-2rem)
+margin-left: 18rem;
+}
+
+span{
+margin-left: 18rem;
+}
+
+

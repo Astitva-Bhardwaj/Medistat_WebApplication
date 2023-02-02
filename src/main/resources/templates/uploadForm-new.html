@@ -1,0 +1,97 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<!--<html>-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Home Page</title>
+    <!--Made with love by Mutiullah Samim -->
+
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/uploadForm-new.css}" />
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Upload Files</h3>
+            </div>
+            <div class="card-body">
+
+                <div>
+                    <label><b><h4 style="background-color: #ffc312; color: black">Prescription: </h4></b></label>
+                    <form method="POST" enctype="multipart/form-data" action="/upload">
+                        <table>
+                            <tr>
+                                <td style="background-color: #d79edb; color: black; font-size: 15px">File to upload: </td>
+                                <td style="color: white"><input type="file" name="file" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="submit" value="Upload" style="background-color: green; color: white"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <div>
+                    <label><b><h4 style="background-color: #ffc312; color: black">Health Reports: </h4></b></label>
+                    <form method="POST" enctype="multipart/form-data" action="/upload">
+                        <table>
+                            <tr>
+                                <td style="background-color: #d79edb; color: black; font-size: 15px">File to upload: </td>
+                                <td style="color: white"><input type="file" name="file" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="submit" value="Upload" style="background-color: green; color: white"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <div>
+                    <ul>
+                        <li th:each="file : ${files}">
+                            <a th:href="${file}" th:text="${file}" />
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <br><br><br>
+            <form class="col-5" th:action="@{/textToSpeech}"  method="get">
+                <button type="submit" class="btn btn-primary btn-lg" style="background-color: #ffc312; color: black">Do you want to speak</button>
+            </form>
+
+            <a href="https://www.netmeds.com/healthstore?source_attribution=ADW-CPC-Search-NMS-Brand&utm_source=ADW-CPC-Search-NMS-Brand&utm_medium=CPC&utm_campaign=ADW-CPC-Search-NMS-Brand&gclid=Cj0KCQiA2-2eBhClARIsAGLQ2Rl3nE4fczQ7EaLFwlshRPMkc2hyE1pf9GVubDtscAWWoCFJpkr7rFEaAgx4EALw_wcB"><b style="color: black">Do you want to refill your medicine ?</b></a>
+
+
+            <form class="col-5" th:action="@{/rating}"  method="get">
+                <button type="submit" class="btn btn-primary btn-lg" style="background-color: #ffc312; color: black">RATING</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
