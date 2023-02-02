@@ -141,5 +141,7 @@ public class UserController {
         ratingService.addRating(rating);
         return "rating-saved";
     }
+
+//    new comments added
 }
 
