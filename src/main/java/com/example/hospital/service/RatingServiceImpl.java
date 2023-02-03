@@ -1,6 +1,6 @@
 package com.example.hospital.service;
 
-import com.example.hospital.model.Rating;
+import com.example.hospital.model.user.Rating;
 import com.example.hospital.repository.rating.RatingRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

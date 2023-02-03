@@ -1,6 +1,6 @@
 package com.example.hospital.repository.rating;
 
-import com.example.hospital.model.Rating;
+import com.example.hospital.model.user.Rating;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

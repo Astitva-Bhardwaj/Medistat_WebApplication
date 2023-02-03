@@ -1,5 +1,5 @@
 package com.example.hospital.controller;
-import com.example.hospital.model.Rating;
+import com.example.hospital.model.user.Rating;
 import com.example.hospital.model.file.FileDB;
 import com.example.hospital.model.user.DownloadRequest;
 import com.example.hospital.model.user.User;
@@ -9,10 +9,6 @@ import com.example.hospital.response.ResponseMessage;
 import com.example.hospital.service.FileStorageService;
 import com.example.hospital.service.RatingServiceImpl;
 import com.example.hospital.service.UserService;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.QRCodeWriter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -27,9 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import org.springframework.core.io.*;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+import java.text.AttributedString;
 
 
 @Controller
@@ -135,13 +129,12 @@ public class UserController {
     }
 
     @PostMapping("/ratingSaved")
-    public String save(@ModelAttribute("rating") Rating rating) {
+    public String save(@ModelAttribute("rating") Rating rating ) {
         log.info("User Controller - save");
-       // model.addAttribute("rating", rating);
+        //model.addAttribute("rating", rating);
         ratingService.addRating(rating);
         return "rating-saved";
     }
 
-//    new comments added
 }
 
