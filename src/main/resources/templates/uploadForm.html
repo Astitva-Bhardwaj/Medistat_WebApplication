@@ -1,12 +1,83 @@
+<!--<html xmlns:th="https://www.thymeleaf.org">-->
+<!--<body>-->
+
+<!--<div th:if="${message}">-->
+<!--    <h2 th:text="${message}"/>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <label><b><h2>Prescription: </h2></b></label>-->
+<!--    <form method="POST" enctype="multipart/form-data" action="/upload">-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td>File to upload: </td>-->
+<!--                <td><input type="file" name="file" />-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <input type="submit" value="Upload" style="background-color: green; color: white"/>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <label><b><h2>Health Reports: </h2></b></label>-->
+<!--    <form method="POST" enctype="multipart/form-data" action="/upload">-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td>File to upload: </td>-->
+<!--                <td><input type="file" name="file" />-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <input type="submit" value="Upload" style="background-color: green; color: white"/>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </form>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <ul>-->
+<!--        <li th:each="file : ${files}">-->
+<!--            <a th:href="${file}" th:text="${file}" />-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<form class="col-5" th:action="@{/textToSpeech}"  method="get">-->
+<!--    <button type="submit" class="btn btn-primary btn-lg">Do you want to speak</button>-->
+<!--</form>-->
+
+<!--&lt;!&ndash;<a href="https://www.netmeds.com/healthstore?source_attribution=ADW-CPC-Search-NMS-Brand&utm_source=ADW-CPC-Search-NMS-Brand&utm_medium=CPC&utm_campaign=ADW-CPC-Search-NMS-Brand&gclid=Cj0KCQiA2-2eBhClARIsAGLQ2Rl3nE4fczQ7EaLFwlshRPMkc2hyE1pf9GVubDtscAWWoCFJpkr7rFEaAgx4EALw_wcB"><b style="color: black">Do you want to refill your medicine ?</b></a>&ndash;&gt;-->
+
+
+<!--<form class="col-5" th:action="@{/rating}"  method="get">-->
+<!--    <button type="submit" class="btn btn-primary btn-lg" style="background-color: #ffc312; color: black">RATING</button>-->
+<!--</form>-->
+
+<!--</body>-->
+<!--</html>-->
+
 <html xmlns:th="https://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/upload-form.css}" />
 <body>
 
 <div th:if="${message}">
     <h2 th:text="${message}"/>
 </div>
 
-<div>
-    <label><b><h2>Prescription: </h2></b></label>
+<div class="city">
+    <label><b><h2>PRESCRIPTION</h2></b></label>
     <form method="POST" enctype="multipart/form-data" action="/upload">
         <table>
             <tr>
@@ -26,8 +97,8 @@
 </div>
 
 
-<div>
-    <label><b><h2>Health Reports: </h2></b></label>
+<div class="city">
+    <label><b><h2>HEALTH REPORTS</h2></b></label>
     <form method="POST" enctype="multipart/form-data" action="/upload">
         <table>
             <tr>
@@ -46,7 +117,7 @@
     </form>
 </div>
 
-<div>
+<div class ="city">
     <ul>
         <li th:each="file : ${files}">
             <a th:href="${file}" th:text="${file}" />
@@ -54,15 +125,17 @@
     </ul>
 </div>
 
+
+
 <form class="col-5" th:action="@{/textToSpeech}"  method="get">
-    <button type="submit" class="btn btn-primary btn-lg">Do you want to speak</button>
+    <button type="submit" class="btn btn-primary btn-lg">Do you want to speak </button>
 </form>
 
 <!--<a href="https://www.netmeds.com/healthstore?source_attribution=ADW-CPC-Search-NMS-Brand&utm_source=ADW-CPC-Search-NMS-Brand&utm_medium=CPC&utm_campaign=ADW-CPC-Search-NMS-Brand&gclid=Cj0KCQiA2-2eBhClARIsAGLQ2Rl3nE4fczQ7EaLFwlshRPMkc2hyE1pf9GVubDtscAWWoCFJpkr7rFEaAgx4EALw_wcB"><b style="color: black">Do you want to refill your medicine ?</b></a>-->
 
 
 <form class="col-5" th:action="@{/rating}"  method="get">
-    <button type="submit" class="btn btn-primary btn-lg" style="background-color: #ffc312; color: black">RATING</button>
+    <button type="submit" class="btn btn-primary btn-lg" style="background-color: #ff7512; color: black">RATING</button>
 </form>
 
 </body>
