@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(LoginPhoto.jpeg);
+    background-size: 1000px;
+    width: 1000px;
+    height:1000px;
+    background-position: center;
+    font-family: sans-serif;
+}
+.container{
+    width: 320px;
+    height: 420px;
+    background: hwb(337 22% 70% / 0.502);
+    color: rgb(4, 1, 16);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.container p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.container input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #180101;
+    font-size: 16px;
+}
+.btn btn-success input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.btn btn-success input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+
+.container a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+.container a:hover
+{
+    color: #39dc79;
+}

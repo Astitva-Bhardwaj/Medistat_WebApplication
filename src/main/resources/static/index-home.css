@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    width: 500;
+    min-height: 100vh;
+    padding: 20%;
+    background-image: linear-gradient(#f4f9fe01,#f0f2f9e6), url(medishop.jpeg);
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  html {
+    font-family: "Montserrat";
+    font-size: 20px;
+  }
+  section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: #56a0ad;
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  section h1 {
+    color: rgba(255, 255, 255, 0.322);
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  section p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.322);
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .texts p {
+    color: hsla(238, 89%, 47%, 0.941);
+    text-align: left;
+    width: 100%;
+    background-color: hwb(0 100% 0%);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .texts p.replay {
+    text-align: right;
+  }

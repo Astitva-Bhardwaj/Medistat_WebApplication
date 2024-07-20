@@ -1,0 +1,37 @@
+body{
+    background:url(upload.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+
+
+    text-decoration-color: red;
+      color: black;
+       display: block;
+        text-align:right;
+        padding: 1px 100px;
+
+
+
+    }
+
+.city{
+    text-decoration-color: red;
+    color: black;
+     display: block;
+      text-align:left;
+      padding: 1px 500px;
+
+}
+form{
+    text-decoration-color: red;
+    color: black;
+     display: block;
+      text-align:left;
+      padding: 1px 100px;
+      text-align:center;
+
+
+}

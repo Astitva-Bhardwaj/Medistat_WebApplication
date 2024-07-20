@@ -15,4 +15,5 @@ public class UserRequest {
     private String username;
 
     private String password;
+
 }

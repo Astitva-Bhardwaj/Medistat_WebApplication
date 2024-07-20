@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService {
         genrateQRCode(user);
     }
 
+
     public String genrateQRCode(@ModelAttribute("qr") User qrDetailsPOJO) {
         try {
             BufferedImage bufferedImage = generateQRCodeImage(qrDetailsPOJO);
